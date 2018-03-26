@@ -18,10 +18,61 @@ If r > l
 `Call merge(arr, l, m, r)`
 
 ## Algorithm
-`void merge(int arr[],int start, int mid, int end)
+>MergeSort(A, p, r)
+  If p > r 
+     return;
+     mergeSort(A, q+1, r)
+     merge(A, p, q, r)
+
+>void merge(int A[], int p, int q, int r)
     {
-    //make temporary variable to store starting index of both the arrays
-    int p = start, q = mid +1;
-    int Arr[] 
+    /* Create L ← A[p..q] and M ← A[q+1..r] */
+    int n1 = q - p + 1;
+    int n2 =  r - q;
+ 
+    int L[n1], M[n2];
+
+    for (i = 0; i < n1; i++)
+        L[i] = A[p + i];
+    for (j = 0; j < n2; j++)
+        M[j] = A[q + 1 + j];
+    
+    /* Maintain current index of sub-arrays and main array */
+    int i, j, k;
+    i = 0; 
+    j = 0; 
+    k = p; 
+
+
+    /* Until we reach either end of either L or M, pick larger among elements L and M and place them in the correct position at A[p..r] */
+    while (i < n1 && j < n2)
+    {
+        if (L[i] <= M[j])
+        {
+            arr[k] = L[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = M[j];
+            j++;
+        }
+        k++;
     }
-`
+ 
+    /* When we run out of elements in either L or M, pick up the remaining elements and put in A[p..r] */
+    while (i < n1)
+    {
+        A[k] = L[i];
+        i++;
+        k++;
+    }
+ 
+    while (j < n2)
+        {
+        A[k] = M[j];
+        j++;
+        k++; }
+    }
+### Foot Notes
+With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms.
