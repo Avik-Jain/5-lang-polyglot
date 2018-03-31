@@ -87,7 +87,6 @@ void printArray(int A[], int size)
     printf("\n");
 }
  
-/* Driver program to test above functions */
 int main()
 {
     int arr[] = {12, 11, 13, 5, 6, 7};
