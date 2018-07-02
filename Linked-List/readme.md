@@ -22,3 +22,23 @@ Arrays can be used to store linear data of similar types, but arrays have follow
 3) Not cache friendly. Since array elements are contiguous locations, there is locality of reference which is not there in case of linked lists.
 ---
 ## Types of Linked Lists
++ Singly Linked List- Singly linked lists contain nodes which have a data field as well as 'next' field, which points to the next node in line of nodes. Operations that can be performed on singly linked lists include insertion, deletion and traversal.
+
+![linkedlist](https://sites.google.com/site/merasemester/_/rsrc/1299735495955/data-structures/linked-list/singly%20linked%20list.JPG)
+
++ Doubly linked list- In a 'doubly linked list', each node contains, besides the next-node link, a second link field pointing to the 'previous' node in the sequence. The two links may be called 'forward('s') and 'backwards', or 'next' and 'prev'('previous').A technique known as XOR-linking allows a doubly linked list to be implemented using a single link field in each node. However, this technique requires the ability to do bit operations on addresses, and therefore may not be available in some high-level languages.
+Many modern operating systems use doubly linked lists to maintain references to active processes, threads, and other dynamic objects.A common strategy for rootkits to evade detection is to unlink themselves from these lists.
+
+![doubly linked list](https://www.geeksforgeeks.org/wp-content/uploads/gq/2014/03/DLL1.png)
+
++ Multiply Linked list- In a 'multiply linked list', each node contains two or more link fields, each field being used to connect the same set of data records in a different order of same set(e.g., by name, by department, by date of birth, etc.). While doubly linked lists can be seen as special cases of multiply linked list, the fact that the two and more orders are opposite to each other leads to simpler and more efficient algorithms, so they are usually treated as a separate case.
+
+![Multiply Linked List](https://1.bp.blogspot.com/-0mamW0g0aj4/WsdhArwUTCI/AAAAAAAACi4/Fx8YEYGb7zkJIJSxQEUTdNa-A9jbLyWaQCLcBGAs/s640/MLL.jpg)
+
++ Circular Linked List- In the last node of a list, the link field often contains a null reference, a special value used to indicate the lack of further nodes. A less common convention is to make it point to the first node of the list; in that case the list is said to be 'circular' or 'circularly linked'; otherwise it is said to be 'open' or 'linear'. It is a list where the last pointer points to the first node.
+In the case of a circular doubly linked list, the first node also points to the last node of the list.
+
+![Circular](http://www.worldbestlearningcenter.com/index_files/Circularly-linkedlist.png)
+
+![Doubly Circular](https://omkarnathsingh.files.wordpress.com/2015/07/dcll.gif)
+
