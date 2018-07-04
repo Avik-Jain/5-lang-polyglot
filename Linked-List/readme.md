@@ -60,3 +60,5 @@ Since a reference to the first node gives access to the whole list, that referen
 
 + Combining alternatives
 The alternatives listed above may be arbitrarily combined in almost every way, so one may have circular doubly linked lists without sentinels, circular singly linked lists with sentinels, etc.
+
+
