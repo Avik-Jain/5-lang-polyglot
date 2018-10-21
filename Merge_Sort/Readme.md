@@ -42,38 +42,3 @@ If r > l
     j = 0; 
     k = p; 
 
-
-    /* Until we reach either end of either L or M, pick larger among elements L and M and 
-    place them in the correct position at A[p..r] */
-    while (i < n1 && j < n2)
-    {
-        if (L[i] <= M[j])
-        {
-            arr[k] = L[i];
-            i++;
-        }
-        else
-        {
-            arr[k] = M[j];
-            j++;
-        }
-        k++;
-    }
- 
-    /* When we run out of elements in either L or M, pick up the 
-    remaining elements and put in A[p..r] */
-    while (i < n1)
-    {
-        A[k] = L[i];
-        i++;
-        k++;
-    }
- 
-    while (j < n2)
-        {
-        A[k] = M[j];
-        j++;
-        k++; }
-    }`
-### Foot Notes
-With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms.
